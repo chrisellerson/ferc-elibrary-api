@@ -21,7 +21,7 @@ const npm = {
 const git = {
   message:
     "release: :bookmark: ${nextRelease.version} <%= new Date().toLocaleDateString('en-US', {year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: 'numeric' }) %> [skip ci]\n\n${nextRelease.notes}",
-  assets: ['**/dist/**', 'package.json', 'pnpm-lock.yaml', 'CHANGELOG.md'],
+  assets: ['dist/**', 'package.json', 'pnpm-lock.yaml', 'CHANGELOG.md'],
 }
 
 /**
