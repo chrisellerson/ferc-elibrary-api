@@ -5,10 +5,12 @@
   "repository": "github:4very/ferc-elibrary-api",
   "main": "index.js",
   "scripts": {
-    "run": "tsx src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "semantic-release",
-    "commit": "cz"
+    "init": "pnpm install --frozen-lockfile",
+    "lint": "echo \"Lint\"",
+    "test": "echo \"Error: no tests specified\"",
+    "build": "tsx src/index.ts",
+    "commit": "cz",
+    "release": "semantic-release"
   },
   "keywords": [],
   "author": "",

@@ -40,7 +40,7 @@ module.exports = {
     ['@semantic-release/release-notes-generator', releaseNotes],
     ['@semantic-release/changelog', changelog],
     ['@semantic-release/npm', npm],
-    // '@semantic-release/github',
+    '@semantic-release/github',
     ['@semantic-release/git', git],
   ],
   dryRun: true,
