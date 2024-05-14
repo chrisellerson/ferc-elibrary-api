@@ -5,6 +5,7 @@
   "repository": "github:4very/ferc-elibrary-api",
   "main": "index.js",
   "scripts": {
+    "run": "tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "semantic-release",
     "commit": "cz"
@@ -22,7 +23,9 @@
     "commitizen": "^4.3.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "cz-emoji": "1.3.2-canary.2",
-    "semantic-release": "^23.1.1"
+    "semantic-release": "^23.1.1",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5"
   },
   "config": {
     "commitizen": {
