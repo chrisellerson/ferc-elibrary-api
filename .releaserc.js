@@ -1,5 +1,6 @@
 const commitAnalyzer = {
   preset: 'conventionalcommits',
+  releaseRules: [{ type: 'docs', scope: 'README', release: 'patch' }],
 }
 
 const releaseNotes = {
