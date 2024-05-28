@@ -4,11 +4,17 @@
   "description": "",
   "repository": "github:4very/ferc-elibrary-api",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "init": "pnpm install --frozen-lockfile",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:bench": "vitest bench",
+    "test:ui": "vitest --ui --coverage --typecheck",
+    "test:coverage": "vitest run --coverage",
     "lint": "echo \"Lint\"",
-    "test": "echo \"Error: no tests specified\"",
-    "build": "tsx src/index.ts",
     "commit": "cz",
     "release": "semantic-release"
   },
@@ -16,18 +22,25 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^12.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.3",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^13.0.0",
+    "@types/node": "^20.12.12",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
     "commitizen": "^4.3.0",
     "conventional-changelog-conventionalcommits": "7.0.2",
     "cz-emoji": "1.3.2-canary.2",
+    "rollup-plugin-typescript-paths": "^1.5.0",
     "semantic-release": "^23.1.1",
-    "tsx": "^4.10.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^1.6.0"
   },
   "config": {
     "commitizen": {
