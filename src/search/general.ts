@@ -1,4 +1,6 @@
 import type { GeneralSearchParams, GeneralSearchResult } from "~/types";
+import { Search } from "./search";
+import { fetchFunction } from "~/util/fetch";
 
 const defaultSearch: GeneralSearchParams = {
   searchText: '*',
@@ -18,7 +20,7 @@ const defaultSearch: GeneralSearchParams = {
     },
   ],
   resultsPerPage: 100,
-  curPage: 0,
+  curPage: 1,
   classTypes: [],
   sortBy: '',
   groupBy: 'NONE',
@@ -27,32 +29,41 @@ const defaultSearch: GeneralSearchParams = {
 }
 
 
-export default class GeneralSearch {
+export default class GeneralSearch extends Search<GeneralSearchParams, GeneralSearchResult> {
+  readonly defaultParams = defaultSearch
+  readonly fetch = fetchFunction<GeneralSearchParams, GeneralSearchResult>("Search/AdvancedSearch")
 
-  search: GeneralSearchParams
-  data: GeneralSearchResult | undefined
-
-
-  constructor(search: Partial<GeneralSearchParams>){
-    this.search = {...defaultSearch, ...search}
+  constructor(params: Partial<GeneralSearchParams>) {
+    super()
+    this.params = { ...this.defaultParams, ...params }
+    if (this.params.curPage === 0) this.params.curPage = 1
   }
 
-  async fetch() {
-    const r = await fetch('https://elibrary.ferc.gov/eLibrarywebapi/api/Search/AdvancedSearch', {
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(this.search),
-      method: 'post',
+  async getData() {
+    this.data = await this.fetch(this.params)
+  }
+
+  updateParams(params: Partial<GeneralSearch>) {
+    this.params = { ...defaultSearch, ...params }
+  }
+
+  async nextPage(): Promise<boolean> {
+    const { resultsPerPage, curPage } = this.params
+    if ((this.data?.totalHits ?? -1) > (resultsPerPage * (curPage))) {
+      this.params.curPage++
+      await this.getData()
+      return true
     }
-  )
-  this.data = await (r).json()
+    return false
   }
 
-
-
-  updateSearch(){}
-  nextPage() {}
-  prevPage() {}
-  page() {}
+  async prevPage(): Promise<boolean> {
+    const { curPage } = this.params
+    if (curPage > 1) {
+      this.params.curPage--
+      await this.getData()
+      return true
+    }
+    return false
+  }
 }

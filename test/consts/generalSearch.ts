@@ -1,3 +1,5 @@
+import { GeneralSearchParams } from '~/types'
+
 export const EMPTY_GENERAL_SEARCH = {
   searchHits: [],
   totalHits: 0,
@@ -82,4 +84,35 @@ export const NULL_SEARCH_RESULT = {
   success: false,
   errorMessage: null,
   searchResultId: null,
+}
+
+export const SINGLE_PAGE_SEARCH_PARAMS: GeneralSearchParams = {
+  searchText: '*',
+  searchFullText: true,
+  searchDescription: true,
+  dateSearches: [
+    {
+      dateType: 'filed_date',
+      startDate: '2020-11-19',
+      endDate: '2020-12-16',
+    },
+  ],
+  availability: null,
+  affiliations: [],
+  categories: [],
+  libraries: [],
+  accessionNumber: null,
+  eFiling: false,
+  docketSearches: [
+    {
+      docketNumber: 'P-15056-000',
+      subDocketNumbers: [],
+    },
+  ],
+  resultsPerPage: 1,
+  classTypes: [],
+  sortBy: '',
+  groupBy: 'NONE',
+  idolResultID: '',
+  allDates: false,
 }

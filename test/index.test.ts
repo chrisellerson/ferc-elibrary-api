@@ -1,10 +1,10 @@
-import { bench, describe, expect, test } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import GeneralSearch from '../src/search/general'
-import { GeneralSearchParams, GeneralSearchResult } from '../src/types'
 import {
   EMPTY_GENERAL_SEARCH,
   NULL_SEARCH_RESULT,
   SINGLE_GENERAL_SEARCH,
+  SINGLE_PAGE_SEARCH_PARAMS,
 } from './consts/generalSearch'
 
 describe.concurrent('General Search', () => {
@@ -17,7 +17,7 @@ describe.concurrent('General Search', () => {
         },
       ],
     })
-    await s.fetch()
+    await s.getData()
     expect(s.data).toEqual(EMPTY_GENERAL_SEARCH)
   })
 
@@ -37,7 +37,7 @@ describe.concurrent('General Search', () => {
         },
       ],
     })
-    await s.fetch()
+    await s.getData()
     expect(s.data).toEqual(SINGLE_GENERAL_SEARCH)
   })
   test('Null Docket Number', async () => {
@@ -49,43 +49,15 @@ describe.concurrent('General Search', () => {
         },
       ],
     })
-    await s.fetch()
+    await s.getData()
     expect(s.data).toEqual(NULL_SEARCH_RESULT)
   })
-  test('Null Docket Number', async () => {
-    const s = new GeneralSearch({
-      docketSearches: [
-        {
-          docketNumber: '',
-          subDocketNumbers: [],
-        },
-      ],
-      resultsPerPage: 200,
-    })
-    await s.fetch()
-
-    const keys: (keyof GeneralSearchResult['searchHits'][number])[] = [
-      'acesssionNumber',
-      'familyValue',
-      'docketNumbers',
-      'score',
-    ]
-    const sets = Object.fromEntries(keys.map((k) => [k, new Set()]))
-
-    s.data?.searchHits.forEach((e) => {
-      keys.forEach((k) =>
-        Array.isArray(e[k]) && typeof e[k] !== 'string'
-          ? e[k]?.forEach((ek) => sets[k].add(ek))
-          : sets[k].add(e[k])
-      )
-    })
-    console.log(
-      JSON.stringify(
-        Object.fromEntries(
-          Object.entries(sets).map(([key, val]) => [key, [...val]])
-        )
-      )
-    )
-    // expect(s.data).toEqual(NULL_SEARCH_RESULT)
+  test('Single Page Search', async () => {
+    const s = new GeneralSearch(SINGLE_PAGE_SEARCH_PARAMS)
+    await s.getData()
+    expect(await s.prevPage()).toBe(false)
+    expect(await s.nextPage()).toBe(true)
+    expect(await s.nextPage()).toBe(false)
+    expect(await s.prevPage()).toBe(true)
   })
 })

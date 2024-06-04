@@ -7,8 +7,8 @@ import {
 } from './stubs'
 
 export type DocketSearch = {
-  docketNumber: string
-  subDocketNumbers: string[]
+  docketNumber: string | null
+  subDocketNumbers: string[] | null
 }
 export type DateSearch = {
   dateType: 'issued_date' | 'filed_date' | 'posted_date'
@@ -75,7 +75,7 @@ export type GeneralSearchResult = {
   searchHits: {
     reference: string
     documentId: string
-    acesssionNumber: string
+    acesssionNumber: string // NOTE this is misspelled
     docketNumbers: string[]
 
     description: string
