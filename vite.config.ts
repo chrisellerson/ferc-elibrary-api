@@ -23,5 +23,8 @@ export default defineConfig({
       fileName: 'index',
       formats: ['es', 'cjs'],
     },
+    rollupOptions: {
+      external: ['fs', 'path'],
+    },
   },
 })

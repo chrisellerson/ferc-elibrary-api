@@ -1,6 +1,6 @@
 //  https://elibrary.ferc.gov/eLibrarywebapi/api/File/DownloadP8File
 
-import { writeFile, writeFileSync } from 'fs'
+import { writeFileSync } from 'fs'
 import { join } from 'path'
 import { DownloadFileParams } from '~/types/DownloadFile'
 
