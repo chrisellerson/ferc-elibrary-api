@@ -51,7 +51,7 @@ async function download<
   B extends Record<string, unknown> | string,
   P extends Record<string, string>
 >(fileInfo: FileInfo, url: string, params: P, body: B) {
-  fetch(
+  return fetch(
     `https://elibrary.ferc.gov/eLibrarywebapi/api/${url}?` +
       new URLSearchParams(params),
     {

@@ -1,18 +1,45 @@
-import { existsSync } from 'fs'
-import { describe, expect, test } from 'vitest'
+import { existsSync, mkdirSync } from 'fs'
+import { beforeAll, describe, expect, test } from 'vitest'
 import { downloadFile, generatePDF } from '~/util/download'
 
 describe.concurrent('Download Files', () => {
+  beforeAll(async () => {
+    if (!existsSync('temp')) mkdirSync('temp')
+  })
+
   test('Download PDF', async () => {
     const fileID = '020AAB97-66E2-5005-8110-C31FAFC91712'
-    await downloadFile({
-      FileType: '',
-      accession: '',
-      fileid: 0,
-      FileIDAll: '',
-      fileidLst: [fileID],
-      Islegacy: false,
-    })
+    await downloadFile(
+      {
+        FileType: '',
+        accession: '',
+        fileid: 0,
+        FileIDAll: '',
+        fileidLst: [fileID],
+        Islegacy: false,
+      },
+      {
+        file: fileID,
+      }
+    )
+    expect(existsSync(`temp/${fileID}.pdf`)).toBeTruthy()
+  })
+
+  test('Download Empty PDF', async () => {
+    const fileID = 'temp'
+    await downloadFile(
+      {
+        FileType: '',
+        accession: '',
+        fileid: 0,
+        FileIDAll: '',
+        fileidLst: [],
+        Islegacy: false,
+      },
+      {
+        file: fileID,
+      }
+    )
     expect(existsSync(`temp/${fileID}.pdf`)).toBeTruthy()
   })
 
