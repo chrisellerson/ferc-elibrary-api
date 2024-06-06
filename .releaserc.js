@@ -15,7 +15,7 @@ const changelog = {
 }
 
 const npm = {
-  npmPublish: false,
+  npmPublish: true,
 }
 
 const git = {
@@ -39,7 +39,7 @@ export default {
     ['@semantic-release/commit-analyzer', commitAnalyzer],
     ['@semantic-release/release-notes-generator', releaseNotes],
     ['@semantic-release/changelog', changelog],
-    ['@semantic-release/npm', npm],
+    ['semantic-release-pnpm', npm],
     '@semantic-release/github',
     ['@semantic-release/git', git],
   ],
