@@ -22,9 +22,6 @@ export default class NewDocketSearch extends Search<
   }
 
   setFetch() {
-    console.log(
-      `Docket/GetATMSdocs/${this.params.by}/${this.params.start}/${this.params.end}/DocketFullNumber`
-    )
     this.fetch = fetchFunction<{}, NewDocketResults>(
       `Docket/GetATMSdocs/${this.params.by}/${this.params.start}/${this.params.end}/DocketFullNumber`,
       'get'

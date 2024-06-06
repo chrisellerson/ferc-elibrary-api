@@ -1,16 +1,17 @@
 export function fetchFunction<SearchParams, SearchResults>(
-  searchType: string, method = "post"
+  searchType: string,
+  method = 'post'
 ): (params: SearchParams) => Promise<SearchResults> {
   return async (params: SearchParams) => {
-    console.log(`https://elibrary.ferc.gov/eLibrarywebapi/api/${searchType}`)
     return fetch(`https://elibrary.ferc.gov/eLibrarywebapi/api/${searchType}`, {
-      headers: {
-        'content-type': 'application/json',
+      ...{
+        headers: {
+          'content-type': 'application/json',
+        },
+        method,
       },
-      body: JSON.stringify(params),
-      method,
+      ...(method !== 'get' ? { body: JSON.stringify(params) } : {}),
     }).then((r) => {
-      console.log(r)
       return r.json()
     })
   }

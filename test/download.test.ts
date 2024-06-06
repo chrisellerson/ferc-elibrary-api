@@ -1,6 +1,6 @@
 import { existsSync } from 'fs'
 import { describe, expect, test } from 'vitest'
-import { downloadFile } from '~/util/download'
+import { downloadFile, generatePDF } from '~/util/download'
 
 describe.concurrent('Download Files', () => {
   test('Download PDF', async () => {
@@ -13,7 +13,7 @@ describe.concurrent('Download Files', () => {
       fileidLst: [fileID],
       Islegacy: false,
     })
-    expect(existsSync(`temp/${fileID}`)).toBeTruthy()
+    expect(existsSync(`temp/${fileID}.pdf`)).toBeTruthy()
   })
 
   test('Download TIF', async () => {
@@ -31,6 +31,14 @@ describe.concurrent('Download Files', () => {
         format: 'tif',
       }
     )
-    expect(existsSync(`temp/${fileID}`)).toBeTruthy()
+    expect(existsSync(`temp/${fileID}.tif`)).toBeTruthy()
+  })
+
+  test('Generate PDF', async () => {
+    const fileID = '20201119-5202'
+    await generatePDF(fileID, {
+      format: 'pdf',
+    })
+    expect(existsSync(`temp/${fileID}.pdf`)).toBeTruthy()
   })
 })
