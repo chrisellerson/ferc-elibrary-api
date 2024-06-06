@@ -1,6 +1,6 @@
 //  https://elibrary.ferc.gov/eLibrarywebapi/api/File/DownloadP8File
 
-import { writeFile } from 'fs'
+import { writeFile, writeFileSync } from 'fs'
 import { join } from 'path'
 import { DownloadFileParams } from '~/types/DownloadFile'
 
@@ -65,11 +65,10 @@ async function download<
   )
     .then((r) => r.arrayBuffer())
     .then((ab) =>
-      writeFile(
+      writeFileSync(
         join(fileInfo.path, `${fileInfo.file}.${fileInfo.format}`),
         Buffer.from(ab),
-        'binary',
-        () => {}
+        'binary'
       )
     )
 }
