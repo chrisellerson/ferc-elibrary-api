@@ -27,7 +27,7 @@ const git = {
 /**
  * @type {import('semantic-release').GlobalConfig}
  */
-module.exports = {
+export default {
   branches: [
     'main',
     {
