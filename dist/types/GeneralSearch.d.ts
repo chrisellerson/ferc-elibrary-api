@@ -9,6 +9,14 @@ export type DateSearch = {
     startDate: string;
     endDate: string;
 };
+/**
+ * Search params for an eLibrary General Search
+ * https://elibrary.ferc.gov/eLibrary/search
+ *
+ *
+ *
+ *
+ */
 export type GeneralSearchParams = {
     docketSearches: DocketSearch[];
     accessionNumber?: string | null;

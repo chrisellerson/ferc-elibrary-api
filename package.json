@@ -1,6 +1,6 @@
 {
   "name": "ferc-elibrary-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "repository": "github:4very/ferc-elibrary-api",
   "main": "index.js",
