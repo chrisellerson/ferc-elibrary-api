@@ -36,6 +36,9 @@ jobs:
         with:
           version: 9
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Initialize packages
         run: pnpm run init
       - name: Lint Files
@@ -55,15 +58,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm run release
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: './docs/html'
+          path: docs/.vitepress/dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
