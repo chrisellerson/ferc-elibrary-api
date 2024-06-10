@@ -11,11 +11,6 @@ concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: true
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   release:
     name: Release
@@ -24,6 +19,8 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
+      id-token: write
+      pages: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
