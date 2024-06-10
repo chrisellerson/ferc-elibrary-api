@@ -16,7 +16,14 @@ export type DateSearch = {
   endDate: string
 }
 
-// TODO document all types
+/**
+ * Search params for an eLibrary General Search
+ * https://elibrary.ferc.gov/eLibrary/search
+ *
+ *
+ *
+ *
+ */
 export type GeneralSearchParams = {
   // ways to search
   docketSearches: DocketSearch[]

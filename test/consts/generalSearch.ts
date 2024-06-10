@@ -115,4 +115,5 @@ export const SINGLE_PAGE_SEARCH_PARAMS: GeneralSearchParams = {
   groupBy: 'NONE',
   idolResultID: '',
   allDates: false,
+  curPage: 0,
 }

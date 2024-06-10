@@ -11,3 +11,5 @@ export {
   downloadFile,
   generatePDF,
 }
+
+export type * from './types'
