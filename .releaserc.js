@@ -1,6 +1,9 @@
 const commitAnalyzer = {
   preset: 'conventionalcommits',
   releaseRules: [{ type: 'docs', scope: 'README', release: 'patch' }],
+  releaseRules: [{ type: 'ci', scope: 'patch', release: 'patch' }],
+  releaseRules: [{ type: 'ci', scope: 'major', release: 'major' }],
+  releaseRules: [{ type: 'ci', scope: 'minor', release: 'minor' }],
 }
 
 const releaseNotes = {
