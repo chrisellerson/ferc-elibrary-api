@@ -5,6 +5,7 @@ import typedocSidebar from '../api/typedoc-sidebar.json'
 export default defineConfig({
   title: 'FERC eLibrary API',
   description: 'A VitePress Site',
+  base: '/ferc-elibrary-api/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
