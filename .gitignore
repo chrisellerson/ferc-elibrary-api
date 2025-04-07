@@ -3,5 +3,8 @@ dist
 temp
 coverage
 
+.env
+/downloads/*
+
 docs/.vitepress/dist
 docs/.vitepress/cache

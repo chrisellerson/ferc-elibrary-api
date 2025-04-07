@@ -42,7 +42,7 @@
     "rollup-plugin-typescript-paths": "^1.5.0",
     "semantic-release": "^23.1.1",
     "semantic-release-pnpm": "^1.0.2",
-    "typedoc": "^0.25.13",
+    "typedoc": "^0.28.1",
     "typedoc-plugin-markdown": "^4.0.3",
     "typedoc-vitepress-theme": "^1.0.0",
     "typescript": "^5.4.5",
@@ -58,5 +58,15 @@
     "cz-emoji": {
       "conventional": true
     }
+  },
+  "dependencies": {
+    "@azure/identity": "^4.8.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.10.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   }
 }
