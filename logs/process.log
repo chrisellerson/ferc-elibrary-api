@@ -1,0 +1,314 @@
+=== Process Started at Wed Apr 16 22:35:23 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /home/cellery/.cursor-server/cli/servers/Stable-1649e229afdef8fd1d18ea173f063563f1e722e0/server/bin/remote-cli:/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.14.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '04-15-2025', endDate: '04-16-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 1
+
+-------------------
+Accession Number: 20250415-3088
+Docket Numbers: CP24-468-000
+Description: Order Issuing Certificate and Approving Abandonment re Texas Gas Transmission, LLC's et al. Eunice Reliability and Lake Charles Supply Project under CP24-468. 
+Filed Date: 04/15/2025
+Found 1 orders to process
+
+=== Processing order: 20250415-3088 ===
+Checking if order was previously processed...
+
+2. Downloading PDF...
+Starting download for accession number: 20250415-3088
+Requesting URL: https://elibrary.ferc.gov/eLibraryWebAPI/api/File/DownloadPDF?accesssionNumber=20250415-3088
+Sending request...
+Response status: 200
+Successfully downloaded: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+File size: 313354 bytes
+Download completed: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+
+3. Recording in database...
+Database record created
+
+4. Sending email notification...
+
+=== Starting Email Notification Process ===
+Email Configuration:
+- Client ID: 7141b367-125d-4392-bd0c-626f88bf15a4
+- Tenant ID: 971890ad-cbd3-43ac-8a3d-807c49595291
+- Shared Mailbox: aiinsight@appliedintelligence.systems
+- Recipients: chris@silentquadrant.com
+Sending email via Microsoft Graph API...
+Falling back to shared mailbox endpoint...
+Email sent successfully via shared mailbox endpoint!
+Email notification sent
+
+=== Order processed successfully ===
+
+=== All orders processed ===
+
+Processing completed successfully
+=== Process Completed at Wed Apr 16 22:35:35 UTC 2025 ===
+----------------------------------------
+=== Process Started at Wed Apr 16 22:40:01 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /usr/bin:/bin
+=== Process Started at Wed Apr 16 22:47:01 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/bin:/bin
+Node version: v22.14.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '04-15-2025', endDate: '04-16-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 1
+
+-------------------
+Accession Number: 20250415-3088
+Docket Numbers: CP24-468-000
+Description: Order Issuing Certificate and Approving Abandonment re Texas Gas Transmission, LLC's et al. Eunice Reliability and Lake Charles Supply Project under CP24-468. 
+Filed Date: 04/15/2025
+Found 1 orders to process
+
+=== Processing order: 20250415-3088 ===
+Checking if order was previously processed...
+
+2. Downloading PDF...
+Starting download for accession number: 20250415-3088
+Requesting URL: https://elibrary.ferc.gov/eLibraryWebAPI/api/File/DownloadPDF?accesssionNumber=20250415-3088
+Sending request...
+Response status: 200
+Successfully downloaded: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+File size: 313354 bytes
+Download completed: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+
+3. Recording in database...
+Database record created
+
+4. Sending email notification...
+
+=== Starting Email Notification Process ===
+Email Configuration:
+- Client ID: 7141b367-125d-4392-bd0c-626f88bf15a4
+- Tenant ID: 971890ad-cbd3-43ac-8a3d-807c49595291
+- Shared Mailbox: aiinsight@appliedintelligence.systems
+- Recipients: chris@silentquadrant.com
+Sending email via Microsoft Graph API...
+Falling back to shared mailbox endpoint...
+Email sent successfully via shared mailbox endpoint!
+Email notification sent
+
+=== Order processed successfully ===
+
+=== All orders processed ===
+
+Processing completed successfully
+=== Process Completed at Wed Apr 16 22:47:09 UTC 2025 ===
+----------------------------------------
+=== Process Started at Wed Apr 16 22:49:06 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/home/cellery/.cursor-server/cli/servers/Stable-1649e229afdef8fd1d18ea173f063563f1e722e0/server/bin/remote-cli:/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.14.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '04-13-2025', endDate: '04-16-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 1
+
+-------------------
+Accession Number: 20250415-3088
+Docket Numbers: CP24-468-000
+Description: Order Issuing Certificate and Approving Abandonment re Texas Gas Transmission, LLC's et al. Eunice Reliability and Lake Charles Supply Project under CP24-468. 
+Filed Date: 04/15/2025
+Found 1 orders to process
+
+=== Processing order: 20250415-3088 ===
+Checking if order was previously processed...
+
+2. Downloading PDF...
+Starting download for accession number: 20250415-3088
+Requesting URL: https://elibrary.ferc.gov/eLibraryWebAPI/api/File/DownloadPDF?accesssionNumber=20250415-3088
+Sending request...
+Response status: 200
+Successfully downloaded: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+File size: 313354 bytes
+Download completed: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+
+3. Recording in database...
+Database record created
+
+4. Sending email notification...
+
+=== Starting Email Notification Process ===
+Email Configuration:
+- Client ID: 7141b367-125d-4392-bd0c-626f88bf15a4
+- Tenant ID: 971890ad-cbd3-43ac-8a3d-807c49595291
+- Shared Mailbox: aiinsight@appliedintelligence.systems
+- Recipients: chris@silentquadrant.com
+Sending email via Microsoft Graph API...
+Falling back to shared mailbox endpoint...
+Email sent successfully via shared mailbox endpoint!
+Email notification sent
+
+=== Order processed successfully ===
+
+=== All orders processed ===
+
+Processing completed successfully
+=== Process Completed at Wed Apr 16 22:49:14 UTC 2025 ===
+----------------------------------------
+=== Process Started at Wed Apr 16 22:49:23 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/home/cellery/.cursor-server/cli/servers/Stable-1649e229afdef8fd1d18ea173f063563f1e722e0/server/bin/remote-cli:/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.14.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '04-13-2025', endDate: '04-16-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 1
+
+-------------------
+Accession Number: 20250415-3088
+Docket Numbers: CP24-468-000
+Description: Order Issuing Certificate and Approving Abandonment re Texas Gas Transmission, LLC's et al. Eunice Reliability and Lake Charles Supply Project under CP24-468. 
+Filed Date: 04/15/2025
+Found 1 orders to process
+
+=== Processing order: 20250415-3088 ===
+Checking if order was previously processed...
+
+2. Downloading PDF...
+Starting download for accession number: 20250415-3088
+Requesting URL: https://elibrary.ferc.gov/eLibraryWebAPI/api/File/DownloadPDF?accesssionNumber=20250415-3088
+Sending request...
+Response status: 200
+Successfully downloaded: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+File size: 313354 bytes
+Download completed: /home/cellery/Projects/ferc-elibrary-api/downloads/20250415-3088.pdf
+
+3. Recording in database...
+Database record created
+
+4. Sending email notification...
+
+=== Starting Email Notification Process ===
+Email Configuration:
+- Client ID: 7141b367-125d-4392-bd0c-626f88bf15a4
+- Tenant ID: 971890ad-cbd3-43ac-8a3d-807c49595291
+- Shared Mailbox: aiinsight@appliedintelligence.systems
+- Recipients: chris@silentquadrant.com
+Sending email via Microsoft Graph API...
+Falling back to shared mailbox endpoint...
+Email sent successfully via shared mailbox endpoint!
+Email notification sent
+
+=== Order processed successfully ===
+
+=== All orders processed ===
+
+Processing completed successfully
+=== Process Completed at Wed Apr 16 22:49:31 UTC 2025 ===
+----------------------------------------
+=== Process Started at Thu Apr 17 22:47:01 UTC 2025 ===
+Current directory: /home/cellery/Projects/ferc-elibrary-api
+User running script: cellery
+PATH: /home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/bin:/bin
+Node version: v22.14.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '04-14-2025', endDate: '04-17-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 1
+
+-------------------
+Accession Number: 20250417-3084
+Docket Numbers: CP24-468-000
+Description: Errata to the 04/15/2025 Commission issued Order Issuing Certificate and Approving Abandonment; correcting paragraph 55 re Texas Gas Transmission, LLC et al. under CP24-468. For order see accession number 20250415-3088.
+Filed Date: 04/17/2025
+Found 1 orders to process
+
+=== Processing order: 20250417-3084 ===
+Checking if order was previously processed...
+
+2. Downloading PDF...
+Starting download for accession number: 20250417-3084
+Requesting URL: https://elibrary.ferc.gov/eLibraryWebAPI/api/File/DownloadPDF?accesssionNumber=20250417-3084
+Sending request...
+Response status: 200
+Successfully downloaded: /home/cellery/Projects/ferc-elibrary-api/downloads/20250417-3084.pdf
+File size: 64601 bytes
+Download completed: /home/cellery/Projects/ferc-elibrary-api/downloads/20250417-3084.pdf
+
+3. Recording in database...
+Database record created
+
+4. Sending email notification...
+
+=== Starting Email Notification Process ===
+Email Configuration:
+- Client ID: 7141b367-125d-4392-bd0c-626f88bf15a4
+- Tenant ID: 971890ad-cbd3-43ac-8a3d-807c49595291
+- Shared Mailbox: aiinsight@appliedintelligence.systems
+- Recipients: chris@silentquadrant.com
+Sending email via Microsoft Graph API...
+Falling back to shared mailbox endpoint...
+Email sent successfully via shared mailbox endpoint!
+Email notification sent
+
+=== Order processed successfully ===
+
+=== All orders processed ===
+
+Processing completed successfully
+=== Process Completed at Thu Apr 17 22:47:18 UTC 2025 ===
+----------------------------------------

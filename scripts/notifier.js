@@ -97,12 +97,19 @@ async function sendEmailNotification(order, filepath) {
 
         console.log('Sending email via Microsoft Graph API...');
         
-        // Send mail as shared mailbox
-        await client.api(`/users/${process.env.SHARED_MAILBOX_ADDRESS}/sendMail`)
-            .post({ message });
+        // Try sending directly first
+        try {
+            await client.api('/me/sendMail')
+                .post({ message });
+            console.log('Email sent successfully via /me endpoint!');
+        } catch (error) {
+            console.log('Falling back to shared mailbox endpoint...');
+            // If that fails, try the shared mailbox endpoint
+            await client.api(`/users/${encodeURIComponent(process.env.SHARED_MAILBOX_ADDRESS)}/sendMail`)
+                .post({ message });
+            console.log('Email sent successfully via shared mailbox endpoint!');
+        }
 
-        console.log('Email sent successfully!');
-        
     } catch (error) {
         console.error('\nError in sendEmailNotification:');
         console.error('- Error Name:', error.name);

@@ -76,17 +76,5 @@ async function findNotationalOrders() {
     }
 }
 
-// Immediately execute the function
-console.log('Script started');
-findNotationalOrders()
-    .then(orders => {
-        console.log('Search completed successfully');
-        process.exit(0);
-    })
-    .catch(error => {
-        console.error('Script failed:', error);
-        process.exit(1);
-    });
-
-// Export for use in other modules
+// Remove the immediate execution block
 export default findNotationalOrders; 

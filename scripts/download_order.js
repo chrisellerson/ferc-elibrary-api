@@ -43,7 +43,6 @@ async function downloadOrderPDF(accessionNumber) {
         });
 
         console.log('Response status:', response.status);
-        console.log('Response headers:', response.headers);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -70,23 +69,7 @@ async function downloadOrderPDF(accessionNumber) {
     }
 }
 
-// Immediately execute the download
-console.log('Starting immediate download test...');
-downloadOrderPDF('20250402-3057')
-    .then(filepath => {
-        console.log('Download completed successfully');
-        console.log('File saved to:', filepath);
-    })
-    .catch(error => {
-        console.error('Download failed:', error);
-        process.exit(1);
-    });
-
-// Run if called directly
-if (process.argv[1] === import.meta.url) {
-    main();
-}
-
+// Remove any test execution code and just export the function
 export { downloadOrderPDF };
 
 console.log('\nScript completed'); 
