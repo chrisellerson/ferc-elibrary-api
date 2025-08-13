@@ -4,17 +4,14 @@
 set -e
 
 # Full path definitions
-PROJECT_DIR="/home/cellery/Projects/ferc-elibrary-api"
+PROJECT_DIR="/home/silentquadrant/projects/ferc-elibrary-api"
 LOG_DIR="$PROJECT_DIR/logs"
 LOG_FILE="$LOG_DIR/process.log"
 ERROR_LOG="$LOG_DIR/error.log"
 
-# Set up Node.js environment
-export NVM_DIR="/home/cellery/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Ensure proper PATH
-export PATH="/home/cellery/.nvm/versions/node/v22.14.0/bin:/usr/local/bin:$PATH"
+# Set up Node.js environment (using system-installed Node.js)
+# Add system Node.js path
+export PATH="/usr/bin:$PATH"
 
 # Create logs directory if it doesn't exist
 mkdir -p "$LOG_DIR"
@@ -48,11 +45,15 @@ if [ ! -f "$PROJECT_DIR/.env" ]; then
     exit 1
 fi
 
-# Load environment variables
-source "$PROJECT_DIR/.env"
+# Note: Environment variables are loaded by the Node.js script using dotenv
+# No need to source .env in bash - this avoids parsing issues
 
 # Run the process
 node scripts/process_orders.js >> "$LOG_FILE" 2>> "$ERROR_LOG"
+
+# Run cleanup to manage storage
+echo "Starting storage cleanup..." >> "$LOG_FILE"
+"$PROJECT_DIR/scripts/simple_cleanup.sh" >> "$LOG_FILE" 2>> "$ERROR_LOG"
 
 # Log completion
 echo "=== Process Completed at $(date) ===" >> "$LOG_FILE"

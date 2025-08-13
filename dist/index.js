@@ -1,6 +1,6 @@
 var f = Object.defineProperty;
 var m = (t, e, a) => e in t ? f(t, e, { enumerable: !0, configurable: !0, writable: !0, value: a }) : t[e] = a;
-var i = (t, e, a) => m(t, typeof e != "symbol" ? e + "" : e, a);
+var i = (t, e, a) => (m(t, typeof e != "symbol" ? e + "" : e, a), a);
 import { writeFileSync as d } from "fs";
 import { join as g } from "path";
 class h {

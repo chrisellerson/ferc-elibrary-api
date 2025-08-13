@@ -312,3 +312,84 @@ Email notification sent
 Processing completed successfully
 === Process Completed at Thu Apr 17 22:47:18 UTC 2025 ===
 ----------------------------------------
+=== Process Started at Wed Aug 13 20:37:13 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.18.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '08-12-2025', endDate: '08-13-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 0
+Found 0 orders to process
+No new orders found to process
+
+Processing completed successfully
+=== Process Completed at Wed Aug 13 20:37:16 UTC 2025 ===
+----------------------------------------
+=== Process Started at Wed Aug 13 21:00:01 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/bin:/bin
+Node version: v22.18.0
+=== Process Started at Wed Aug 13 21:12:20 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.18.0
+=== Process Started at Wed Aug 13 21:13:30 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.18.0
+=== Process Started at Wed Aug 13 21:14:05 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.18.0
+=== Process Started at Wed Aug 13 21:24:06 UTC 2025 ===
+Current directory: /home/silentquadrant/projects/ferc-elibrary-api
+User running script: silentquadrant
+PATH: /usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Node version: v22.18.0
+Script starting...
+Import completed
+
+Script completed
+Starting order processing script...
+=== Starting FERC Order Processing ===
+
+1. Searching for new CP Certificate Orders...
+Starting search...
+Search parameters: { startDate: '08-12-2025', endDate: '08-13-2025' }
+Executing search...
+Search completed. Processing results...
+Total documents found: 100
+Certificate Orders found: 0
+Found 0 orders to process
+No new orders found to process
+
+Processing completed successfully
+Starting storage cleanup...
+🧽 Starting simple storage cleanup...
+🧹 Cleaning temp files...
+  ✅ Cleaned temp directory (1MB freed)
+🧹 Managing log files...
+  ✅ Log management completed
+
+✨ Cleanup completed!
+📁 Project size: 376MB
+💾 Disk usage:
+  Used: 3.3G / 35G (10%)
+=== Process Completed at Wed Aug 13 21:24:10 UTC 2025 ===
+----------------------------------------
